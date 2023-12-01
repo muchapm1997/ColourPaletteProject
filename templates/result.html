@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Analysis Results</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .colorBox {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border: 1px solid #000;
+        }
+        .resultContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #uploadedImage {
+            max-width: 100%;
+            max-height: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Analysis Results</h1>
+    
+    <div class="resultContainer">
+        <img id="uploadedImage" src="{{ uploaded_image }}" alt="Uploaded Image">
+        <ul>
+            {% for color in colors %}
+                <li class="colorBox" style="background-color: rgb({{ color.0 }}, {{ color.1 }}, {{ color.2 }})"></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
